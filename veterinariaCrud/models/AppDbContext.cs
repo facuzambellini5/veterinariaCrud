@@ -5,6 +5,8 @@ namespace veterinariaCrud.models;
 
 public class AppDbContext : DbContext
 {
+    public DbSet<Mascota> Mascotas { get; set; }
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         string connStr = ConfigurationManager.ConnectionStrings["veterinariaCrud"].ConnectionString;
@@ -14,6 +16,4 @@ public class AppDbContext : DbContext
             new MySqlServerVersion(new Version(8, 0, 0))
         );
     }
-
-    public DbSet<Mascota> Mascotas { get; set; }
 }

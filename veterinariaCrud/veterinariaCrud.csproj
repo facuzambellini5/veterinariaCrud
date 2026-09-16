@@ -19,10 +19,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="controllers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Update="views\Form1.cs">
         <SubType>Form</SubType>
       </Compile>
