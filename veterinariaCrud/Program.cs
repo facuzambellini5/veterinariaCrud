@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-
 namespace veterinariaCrud;
 
 static class Program
