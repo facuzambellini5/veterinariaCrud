@@ -23,8 +23,7 @@ public class MascotaController
     // Buscar mascota por ID
     public Mascota ObtenerMascotaPorId(int id)
     {
-        // solo retorna si la mascota existe, sino retorna null
-        return _context.Mascotas.FirstOrDefault(m => m.IdMascota == id);
+        return _context.Mascotas.Find(id);
     }
 
     // Crear nueva mascota
