@@ -143,7 +143,7 @@ partial class Form1
         this.lblNumDueno.ForeColor = System.Drawing.SystemColors.GrayText;
         this.lblNumDueno.Location = new System.Drawing.Point(15, 164);
         this.lblNumDueno.Name = "lblNumDueno";
-        this.lblNumDueno.Text = "N° Dueño";
+        this.lblNumDueno.Text = "Teléfono";
         //
         // txtNumDueno
         //

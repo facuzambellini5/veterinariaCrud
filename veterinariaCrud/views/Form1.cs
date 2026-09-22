@@ -63,7 +63,7 @@ public partial class Form1 : Form
 
     private void btnAlta_Click(object? sender, EventArgs e)
     {
-        if (!ValidarFicha(out int numDueno))
+        if (!ValidarFicha(out long numDueno))
             return;
 
         var nueva = new Mascota
@@ -88,7 +88,7 @@ public partial class Form1 : Form
             return;
         }
 
-        if (!ValidarFicha(out int numDueno))
+        if (!ValidarFicha(out long numDueno))
             return;
 
         var actualizada = new Mascota
@@ -128,7 +128,7 @@ public partial class Form1 : Form
     }
 
     // Validación mínima antes de Alta/Modificar.
-    private bool ValidarFicha(out int numDueno)
+    private bool ValidarFicha(out long numDueno)
     {
         numDueno = 0;
 
@@ -141,9 +141,9 @@ public partial class Form1 : Form
             return false;
         }
 
-        if (!int.TryParse(txtNumDueno.Text, out numDueno))
+        if (!long.TryParse(txtNumDueno.Text, out numDueno))
         {
-            MessageBox.Show("N° Dueño debe ser un número.", "Dato inválido",
+            MessageBox.Show("Teléfono debe ser un número.", "Dato inválido",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return false;
         }

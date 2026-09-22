@@ -17,14 +17,14 @@ public class Mascota
     [Column("especie")]
     [MaxLength(50)]
     public string Especie { get; set; }
-    
+
     [Column("raza")]
     [MaxLength(50)]
     public string Raza { get; set; }
 
     [Required]
     [Column("num_dueno")]
-    public int NumDueno { get; set; }
+    public long NumDueno { get; set; }
 
     [Required]
     [Column("nombre_dueno")]
