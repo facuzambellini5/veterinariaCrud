@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\facun\\RiderProjects\\veterinariaCrud\\veterinariaCrud\\veterinariaCrud.csproj": {}
+    "C:\\Users\\mirch\\source\\repos\\veterinariaCrudUltimo\\veterinariaCrud\\veterinariaCrud.csproj": {}
   },
   "projects": {
-    "C:\\Users\\facun\\RiderProjects\\veterinariaCrud\\veterinariaCrud\\veterinariaCrud.csproj": {
+    "C:\\Users\\mirch\\source\\repos\\veterinariaCrudUltimo\\veterinariaCrud\\veterinariaCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\facun\\RiderProjects\\veterinariaCrud\\veterinariaCrud\\veterinariaCrud.csproj",
+        "projectUniqueName": "C:\\Users\\mirch\\source\\repos\\veterinariaCrudUltimo\\veterinariaCrud\\veterinariaCrud.csproj",
         "projectName": "veterinariaCrud",
-        "projectPath": "C:\\Users\\facun\\RiderProjects\\veterinariaCrud\\veterinariaCrud\\veterinariaCrud.csproj",
-        "packagesPath": "C:\\Users\\facun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\facun\\RiderProjects\\veterinariaCrud\\veterinariaCrud\\obj\\",
+        "projectPath": "C:\\Users\\mirch\\source\\repos\\veterinariaCrudUltimo\\veterinariaCrud\\veterinariaCrud.csproj",
+        "packagesPath": "C:\\Users\\mirch\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mirch\\source\\repos\\veterinariaCrudUltimo\\veterinariaCrud\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\facun\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mirch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +41,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0-windows": {
@@ -90,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
