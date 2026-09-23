@@ -17,9 +17,6 @@ public partial class Form1 : Form
         CargarGrid();
     }
 
-    // Trae las mascotas de la base y las vuelca en el grid,
-    // ocultando columnas que no aportan al usuario (Id, Raza, NumDueno)
-    // y dejando visibles solo Nombre, Especie y Dueño.
     private void CargarGrid()
     {
         var mascotas = _controller.ObtenerMascotas();
@@ -46,8 +43,6 @@ public partial class Form1 : Form
         LimpiarFicha();
     }
 
-    // El usuario clickea una fila -> la ficha se completa sola.
-    // Reconocimiento en vez de recuerdo (Lorés).
     private void dgvMascotas_SelectionChanged(object? sender, EventArgs e)
     {
         if (dgvMascotas.CurrentRow?.DataBoundItem is not Mascota mascota)
@@ -59,6 +54,18 @@ public partial class Form1 : Form
         txtRaza.Text = mascota.Raza;
         txtNumDueno.Text = mascota.NumDueno.ToString();
         txtNombreDueno.Text = mascota.NombreDueno;
+
+        
+        grpFichaMascota.Text = $"Ficha de Mascota — Editando: {mascota.Nombre}";
+    }
+
+    // Fix v2 (Error 2): filtra en tiempo real caracteres no numéricos.
+    private void txtNumDueno_KeyPress(object? sender, KeyPressEventArgs e)
+    {
+        if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+        {
+            e.Handled = true;
+        }
     }
 
     private void btnAlta_Click(object? sender, EventArgs e)
@@ -77,6 +84,10 @@ public partial class Form1 : Form
 
         _controller.CrearMascota(nueva);
         CargarGrid();
+
+        // Fix v2 (Error 1): confirmación visible tras el alta.
+        MessageBox.Show($"'{nueva.Nombre}' fue dado de alta correctamente.", "Alta exitosa",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
     private void btnModificar_Click(object? sender, EventArgs e)
@@ -103,6 +114,10 @@ public partial class Form1 : Form
 
         _controller.ActualizarMascota(actualizada);
         CargarGrid();
+
+        // Fix v2 (Error 1): confirmación visible tras la modificación.
+        MessageBox.Show($"'{actualizada.Nombre}' fue modificado correctamente.", "Modificación exitosa",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
     private void btnBaja_Click(object? sender, EventArgs e)
@@ -127,7 +142,6 @@ public partial class Form1 : Form
         CargarGrid();
     }
 
-    // Validación mínima antes de Alta/Modificar.
     private bool ValidarFicha(out long numDueno)
     {
         numDueno = 0;
@@ -159,5 +173,8 @@ public partial class Form1 : Form
         txtRaza.Clear();
         txtNumDueno.Clear();
         txtNombreDueno.Clear();
+
+        // Vuelve al modo "nueva mascota" tras un alta/baja o al limpiar.
+        grpFichaMascota.Text = "Ficha de Mascota (nueva)";
     }
 }

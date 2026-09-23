@@ -2,15 +2,8 @@
 
 partial class Form1
 {
-    /// <summary>
-    ///  Required designer variable.
-    /// </summary>
     private System.ComponentModel.IContainer components = null;
 
-    /// <summary>
-    ///  Clean up any resources being used.
-    /// </summary>
-    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
     protected override void Dispose(bool disposing)
     {
         if (disposing && (components != null))
@@ -23,10 +16,6 @@ partial class Form1
 
     #region Windows Form Designer generated code
 
-    /// <summary>
-    ///  Required method for Designer support - do not modify
-    ///  the contents of this method with the code editor.
-    /// </summary>
     private void InitializeComponent()
     {
         this.dgvMascotas = new System.Windows.Forms.DataGridView();
@@ -83,7 +72,7 @@ partial class Form1
         this.grpFichaMascota.Size = new System.Drawing.Size(260, 320);
         this.grpFichaMascota.TabIndex = 1;
         this.grpFichaMascota.TabStop = false;
-        this.grpFichaMascota.Text = "Ficha de Mascota";
+        this.grpFichaMascota.Text = "Ficha de Mascota (nueva)";
         //
         // lblNombre
         //
@@ -143,7 +132,7 @@ partial class Form1
         this.lblNumDueno.ForeColor = System.Drawing.SystemColors.GrayText;
         this.lblNumDueno.Location = new System.Drawing.Point(15, 164);
         this.lblNumDueno.Name = "lblNumDueno";
-        this.lblNumDueno.Text = "Teléfono";
+        this.lblNumDueno.Text = "Teléfono (solo números)";
         //
         // txtNumDueno
         //
@@ -152,6 +141,7 @@ partial class Form1
         this.txtNumDueno.Name = "txtNumDueno";
         this.txtNumDueno.Size = new System.Drawing.Size(220, 23);
         this.txtNumDueno.TabIndex = 3;
+        this.txtNumDueno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumDueno_KeyPress);
         //
         // lblNombreDueno
         //
